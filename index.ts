@@ -1,7 +1,6 @@
 import Server from './classes/server';
 import userRoutes from './routes/usuario';
 import mongoose from 'mongoose'; 
-import bodyParser from 'body-parser';
 import fileUpload from "express-fileupload";
 import express from 'express';
 import postRoutes from './routes/post';

@@ -61,5 +61,12 @@ class FileSystem {
         const pathTemp = path_1.default.resolve(__dirname, '../uploads/', userId, 'temp');
         return fs_1.default.readdirSync(pathTemp) || [];
     }
+    getFotoUrl(userId, img) {
+        const pathFoto = path_1.default.resolve(__dirname, '../uploads/', userId, 'post', img);
+        if (!fs_1.default.existsSync(pathFoto)) {
+            return path_1.default.resolve(__dirname, '../assets/no-image-banner.jpg');
+        }
+        return pathFoto;
+    }
 }
 exports.default = FileSystem;
